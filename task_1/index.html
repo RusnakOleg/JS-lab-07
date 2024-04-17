@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Зміна кольору тексту і фону</title>
+    <style>
+        #firstLine, #thirdLine {
+            color: black; 
+            background-color: yellow; 
+        }
+        #secondLine {
+            color: red; 
+            background-color: white; 
+        }
+    </style>
+</head>
+<body>
+    <h2 id="firstLine" onclick="toggleFirstThird('firstLine')">Доступ до властивостей і методів</h2>
+    <p id="secondLine" onclick="toggleSecond()">Колекція all</p>
+    <div id="thirdLine" onclick="toggleFirstThird('thirdLine')">Метод getElementById ()</div>
+
+    <script>
+        function toggleFirstThird(id) {
+            var element = document.getElementById(id);
+            if (element.style.color === "black") {
+                element.style.color = "white";
+                element.style.backgroundColor = "blue";
+            } else {
+                element.style.color = "black";
+                element.style.backgroundColor = "yellow";
+            }
+        }
+
+        function toggleSecond() {
+            var element = document.all.secondLine;
+            if (element.style.color === "red") {
+                element.style.color = "white";
+                element.style.backgroundColor = "green";
+            } else {
+                element.style.color = "red";
+                element.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+</html>
