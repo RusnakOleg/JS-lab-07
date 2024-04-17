@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html id='DOCUM'>
+<head>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-text">
+        <h1 id='zag'>ВАСЬКА</h1>
+        Варіант, сумісний з Mozilla
+        <p>
+        <form name='f1'>
+            <input type="button" name="bot" onclick="bm()" value='Збільшити'>
+        </form>
+        <p><img src="VaskaM.jpg" id='Vas' onclick="bm()">
+    </div>
+    <script>
+        var flag = true;
+        function bm() {
+            if (flag) {
+                document.getElementById('Vas').src = 'VaskaB.jpg';
+                var btn = document.forms['f1'].elements['bot'];
+                btn.value = "Зменшити";
+                btn.style.background = 'red';
+                btn.style.color = 'black';
+                flag = false;
+            } else {
+                document.getElementById('Vas').src = 'VaskaM.jpg';
+                var btn = document.forms['f1'].elements['bot'];
+                btn.value = "Збільшити";
+                btn.style.background = 'green';
+                btn.style.color = 'white';
+                flag = true;
+            }
+        }
+    </script>
+</body>
+</html>
